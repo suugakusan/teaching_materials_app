@@ -84,15 +84,5 @@ RSpec.describe User, type: :model do
         expect(user.errors.messages[:password]).to include "は4文字以上で入力してください"
       end
     end
-    context "ユーザーが削除されたとき" do
-      subject { user.destroy }
-      let(:user) { create(:user) }
-      before do
-        create(:post, user_id: user.id)
-      end
-      it "そのユーザーのメッセージも削除される" do
-        expect { subject }.to change { user.posts.count }.by(-2)
-      end
-    end
   end
 end
