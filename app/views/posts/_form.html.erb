@@ -5,7 +5,7 @@
       <%= f.text_field :title, class: 'form-control form-height w-100', required: true %>
     </div>
     <div class="row m-3 justify-content-start">
-      <div  class="col-2" id="school_type">
+      <div class="col-2" id="school_type">
         <%= f.select :schooltype, Post.schooltypes.keys , class: 'form-control' %>
       </div>
       
@@ -40,7 +40,7 @@
 
     <div class="m-3">
       <%= f.label :file, 'ファイル' %>
-      <% if @post.file.present?  %>
+      <% if @post.file.present? %>
         <% if @post.file_identifier.present? %>
           (中身：<%= @post.file_identifier %>)
         <% else %>
