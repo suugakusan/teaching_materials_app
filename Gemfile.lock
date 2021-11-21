@@ -79,6 +79,9 @@ GEM
     bootsnap (1.8.1)
       msgpack (~> 1.0)
     builder (3.2.4)
+    bullet (6.1.5)
+      activesupport (>= 3.0.0)
+      uniform_notifier (~> 1.11)
     byebug (11.1.3)
     carrierwave (2.2.2)
       activemodel (>= 5.0.0)
@@ -99,8 +102,16 @@ GEM
       warden (~> 1.2.3)
     devise-i18n (1.10.0)
       devise (>= 4.8.0)
+    diff-lcs (1.4.4)
     erubi (1.10.0)
     excon (0.85.0)
+    factory_bot (6.2.0)
+      activesupport (>= 5.0.0)
+    factory_bot_rails (6.2.0)
+      factory_bot (~> 6.2.0)
+      railties (>= 5.0.0)
+    faker (2.19.0)
+      i18n (>= 1.6, < 2)
     ffi (1.15.4)
     fog-aws (3.12.0)
       fog-core (~> 2.1)
@@ -195,6 +206,9 @@ GEM
     pry-byebug (3.9.0)
       byebug (~> 11.0)
       pry (~> 0.13.0)
+    pry-doc (1.2.0)
+      pry (~> 0.11)
+      yard (~> 0.9.11)
     public_suffix (4.0.6)
     puma (5.4.0)
       nio4r (~> 2.0)
@@ -245,6 +259,23 @@ GEM
       actionpack (>= 5.0)
       railties (>= 5.0)
     rexml (3.2.4)
+    rspec-core (3.10.1)
+      rspec-support (~> 3.10.0)
+    rspec-expectations (3.10.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.10.0)
+    rspec-mocks (3.10.2)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.10.0)
+    rspec-rails (5.0.2)
+      actionpack (>= 5.2)
+      activesupport (>= 5.2)
+      railties (>= 5.2)
+      rspec-core (~> 3.10)
+      rspec-expectations (~> 3.10)
+      rspec-mocks (~> 3.10)
+      rspec-support (~> 3.10)
+    rspec-support (3.10.2)
     ruby-vips (2.1.3)
       ffi (~> 1.12)
     ruby2_keywords (0.0.5)
@@ -275,6 +306,7 @@ GEM
     turbolinks-source (5.2.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
+    uniform_notifier (1.14.2)
     warden (1.2.9)
       rack (>= 2.0.9)
     web-console (4.1.0)
@@ -290,6 +322,7 @@ GEM
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
+    yard (0.9.26)
     zeitwerk (2.4.2)
 
 PLATFORMS
@@ -299,10 +332,13 @@ DEPENDENCIES
   activeadmin
   bcrypt (~> 3.1.7)
   bootsnap (>= 1.4.4)
+  bullet
   byebug
   carrierwave (~> 2.0)
   devise
   devise-i18n
+  factory_bot_rails
+  faker
   fog-aws (~> 3.12)
   jbuilder (~> 2.7)
   letter_opener_web (~> 1.0)
@@ -311,10 +347,12 @@ DEPENDENCIES
   pagy
   pg (>= 0.18, < 2.0)
   pry-byebug
+  pry-doc
   puma (~> 5.0)
   rails (~> 6.1.3, >= 6.1.3.1)
   rails-i18n (~> 6.0.0)
   rexml
+  rspec-rails
   sass-rails (>= 6)
   spring
   turbolinks (~> 5)
