@@ -18,10 +18,8 @@
             <% unless @post.subject_id == "教科"%>
             　教科：<%= @post.subject_id %>
             <% end %>
-          </p>
-          <p>
             <% unless @post.schoolbook == "教科書"%>
-            教科書：<%= @post.schoolbook %>
+            　教科書：<%= @post.schoolbook %>
             <% end %>
           </p>
           <p><a href=<%= @post.file.url %> download> <%= @post.file_identifier %></a></p>
